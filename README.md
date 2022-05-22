@@ -11,7 +11,7 @@ This is a webpage that will let you order a pizza(not actually, this is a projec
 * TDD
 ## Setup
 1. Set up a code environment. I use VSCode with Git Bash.
-2. Clone this repository using 'git clone TAG'
+2. Clone this repository using 'git clone https://github.com/ElliotMcGonigal/pizza-parlor'
 3. Navigate to the directory and open it in your coding environment. 
 4. Launch the webpage, I use the VSCode addon Live Server to do this. 
 5. Fill out the form and order your pizza. Have fun!
