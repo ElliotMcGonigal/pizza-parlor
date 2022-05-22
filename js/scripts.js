@@ -21,6 +21,10 @@ Pizza.prototype.priceOfPizza = function() {
   this.price = pizzaPrice;
 }
 
+
+///User Interface Logic
+
+
 $(document).ready(function() {
   $("#createPizza").submit(function(event) {
     event.preventDefault();
@@ -32,7 +36,20 @@ $(document).ready(function() {
     });
     const userPizza = new Pizza(pizzaSize, toppingsArray);
     userPizza.priceOfPizza();
+    function pInfo() {
+      let statement = "You are getting a " + userPizza.size + " pizza with ";
+      toppingsArray.forEach(function(current, posi) {
+        if(posi !== toppingsArray.length -1) {
+          statement = statement + current + ", ";
+        } else {
+          statement = statement + "and " + current + ".";
+        }
+      })
+      return statement;
+    }
+    let pizzaInfo = pInfo();
     $("#priceDisplay").html(userPizza.price);
+    $("#pizzaInfo").html(pizzaInfo);
     $("#menu").toggle();
     $("#pricing").toggle();
   });
