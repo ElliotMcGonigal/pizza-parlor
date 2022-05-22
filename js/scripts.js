@@ -20,3 +20,17 @@ Pizza.prototype.priceOfPizza = function() {
   });
   this.price = pizzaPrice;
 }
+
+$(document).ready(function() {
+  $("#createPizza").submit(function(event) {
+    event.preventDefault();
+    const pizzaSize = $("#pizzaSize").val();
+    const toppings = document.querySelectorAll("input[name='toppings']:checked");
+    let toppingsArray = [];
+    toppings.forEach(function(topping) {
+      toppingsArray.push(topping.value);
+    });
+    const userPizza = new Pizza(pizzaSize, toppingsArray);
+    userPizza.priceOfPizza();
+  });
+});
