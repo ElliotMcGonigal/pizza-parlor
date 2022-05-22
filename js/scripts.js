@@ -32,5 +32,6 @@ $(document).ready(function() {
     });
     const userPizza = new Pizza(pizzaSize, toppingsArray);
     userPizza.priceOfPizza();
+    $("#priceDisplay").html(userPizza.price);
   });
 });
