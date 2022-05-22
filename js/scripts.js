@@ -36,4 +36,9 @@ $(document).ready(function() {
     $("#menu").toggle();
     $("#pricing").toggle();
   });
+  $("#return").click(function(event) {
+    event.preventDefault();
+    $("#pricing").toggle();
+    $("#menu").toggle();
+  });
 });
